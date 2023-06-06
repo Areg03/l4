@@ -77,7 +77,7 @@ const Modal = ({ children, text, middle, isOpen, setIsOpen, butt, red, abs }) =>
             {butt && <button onClick={(e) => {
                 e.stopPropagation()
                 handleOpen()
-            }} style={abs && { position: 'absolute', top: 20, right: 30 }} >{text}</button>}
+            }} style={abs && { position: 'absolute', top: 20, right: 80 }} >{text}</button>}
             {isOpen && (
                 <div className={`modal${isBlackBg ? ' black-bg' : ' white-bg'}`}  >
                     <div className={middle ? "modal-content middle" : "modal-content"} ref={modalRef}>
