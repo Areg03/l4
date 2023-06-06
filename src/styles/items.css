@@ -1,0 +1,268 @@
+.carousel {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.carousel-one {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.carousel-items {
+    display: flex;
+    flex-wrap: nowrap;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item {
+    width: calc(100% / 3);
+    flex: 0 0 auto;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+.carousel-prev,
+.carousel-next {
+    position: absolute;
+    top: 63%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    font-size: 2rem;
+    color: white;
+    background-color: #68BC43;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 250ms;
+    border-radius: 50%;
+}
+
+.carousel-not-hidden {
+    display: flex;
+    top: 50%;
+}
+
+.carousel-prev {
+    left: -20px;
+}
+
+.carousel-next {
+    right: -20px;
+
+}
+
+.carousel-prev:hover {
+    background-color: #96dd77;
+}
+
+.carousel-next:hover {
+    background-color: #96dd77;
+}
+
+.carousel-item-general {
+    width: 300px;
+    height: 400px;
+    min-height: 400px;
+    padding: 10px 20px;
+    border-radius: 15px;
+    background-color: white;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset, rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+}
+
+.gray {
+    background-color: #838B7F;
+}
+
+.carousel-item-service {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    color: white;
+}
+
+.carousel-item-member {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 5px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.carousel-item-box {
+    margin-top: 5px;
+    width: 100%;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.carousel-item-box img {
+
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+}
+
+
+.carousel-item-member h4 {
+    margin: 10px 0;
+    letter-spacing: 3px;
+}
+
+.carousel-item-member p {
+    margin: 0;
+    font-size: 0.8rem;
+}
+
+.ramka {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media screen and (max-width: 1100px) {
+
+    .carousel-item-box {
+        height: 250px;
+    }
+
+    .carousel-item-general {
+        width: 250px;
+        height: 300px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .carousel {
+        overflow-x: auto;
+    }
+
+    .carousel-one {
+        border-radius: 110px;
+    }
+
+    .carousel-item-box {
+        height: 280px;
+    }
+
+    .carousel-item-general {
+        width: 280px;
+        height: 330px;
+
+        min-height: 330px;
+    }
+
+    .carousel-item {
+        width: 345px;
+        height: 400px;
+    }
+
+    .carousel-item-service img {
+        width: 80px;
+        height: 85px;
+
+    }
+
+    .carousel-prev,
+    .carousel-next {
+        display: none;
+    }
+
+    .carousel-not-hidden {
+        display: flex;
+    }
+
+    .carousel-item-member p {
+        margin: 0;
+        font-size: 0.65rem;
+    }
+
+    .carousel-item-member h4 {
+        margin: 8px 0;
+    }
+
+
+}
+
+@media screen and (max-width: 768px) {
+    .carousel-one {
+        border-radius: 80px;
+    }
+
+    .carousel-item-box {
+        height: 250px;
+    }
+
+    .carousel-item-general {
+        width: 250px;
+        height: 300px;
+        min-height: 300px;
+    }
+
+    .carousel-item-service img {
+        width: 45px;
+        height: 50px;
+
+    }
+
+    .carousel-item {
+        width: 330px;
+        height: 380px;
+    }
+
+    .carousel-item-member p {
+        margin: 0;
+        font-size: 0.55rem;
+    }
+
+    .carousel-item-member h4 {
+        margin: 6px 0;
+    }
+
+}
+
+@media screen and (max-width: 480px) {
+
+    .carousel-item-box {
+        height: 180px;
+    }
+
+    .carousel-item-general {
+        width: 180px;
+        height: 220px;
+        min-height: 220px;
+    }
+
+    .carousel-item {
+        width: 250px;
+        height: 300px;
+    }
+
+    .carousel-item-member p {
+        margin: 0;
+        font-size: 0.5rem;
+    }
+
+    .carousel-item-member h4 {
+        margin: 4px 0;
+    }
+
+    .carousel-one {
+        border-radius: 60px;
+    }
+}

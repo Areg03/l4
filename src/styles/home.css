@@ -1,0 +1,186 @@
+.videobox video {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 15px;
+
+}
+
+.videotext {
+    max-width: 1340px;
+    width: 90%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.videotext button {
+
+    margin-top: 60px;
+}
+
+.first {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+}
+
+.videotext h1 {
+    display: flex;
+    flex-direction: column;
+    font-size: 3.1rem;
+    font-weight: 400;
+    color: #FF1726;
+    white-space: pre-line;
+}
+
+.h1red {
+    font-size: 3.1rem;
+    font-weight: 400;
+    color: #FF1726;
+    white-space: pre-line;
+    margin: 0;
+}
+
+.videotext p {
+    color: white;
+    font-weight: bold;
+    max-width: 421px;
+}
+
+.videotext h1 span {
+    white-space: pre-line;
+}
+
+.videobox {
+    position: relative;
+    width: 100%;
+    border-radius: 15px;
+}
+
+.container-image {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.container-image .text {
+    flex: 1;
+    padding: 20px;
+    white-space: pre-line;
+}
+
+.container-image .image {
+    flex: 1;
+    padding: 20px;
+    text-align: right;
+    width: 50%;
+}
+
+.container-image .image img {
+
+    width: 100%;
+    height: auto;
+}
+
+@media screen and (max-width: 1220px) {
+    .videobox {
+        height: auto;
+    }
+
+}
+
+@media screen and (max-width: 1024px) {
+    .videotext h1 {
+        font-size: 2.5rem;
+    }
+
+    .h1red {
+        font-size: 2.5rem;
+    }
+
+    .first {
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .videotext h1 {
+        font-size: 1.6rem;
+    }
+
+    .h1red {
+        font-size: 1.6rem;
+    }
+
+    .videotext p {
+        font-size: 0.8rem;
+        max-width: 300px;
+    }
+
+    .videotext button {
+
+        margin-top: 10px;
+    }
+
+    .container-image {
+        flex-direction: column;
+    }
+
+    .container-image .image,
+    .container-image .text {
+        text-align: center;
+    }
+
+    .reverse {
+        flex-direction: column-reverse;
+    }
+
+    .container-image .image {
+
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .videotext {
+        top: 0%;
+        left: 3%;
+        width: 100%;
+        /* gap: 10% */
+    }
+
+    .videotext h1 span {
+        font-size: 1.35rem;
+    }
+
+    .h1red {
+        font-size: 1.35rem;
+    }
+
+    .videotext p {
+        font-size: 0.6rem;
+        max-width: 225px;
+        margin-bottom: 15px;
+    }
+}
+
+@media screen and (max-width: 370px) {
+    .videotext h1 span {
+        font-size: 0.9rem;
+    }
+
+    .h1red {
+        font-size: 0.9rem;
+    }
+
+    .videotext p {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+}

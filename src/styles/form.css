@@ -1,0 +1,201 @@
+.school-form-all {
+    width: 100%;
+}
+
+.school-form-all h2 {
+    text-align: center;
+}
+
+.school-form-all h3 {
+    text-align: center;
+    font-weight: 400;
+}
+
+.school-form-all .both {
+    display: flex;
+    gap: 10px;
+}
+
+.school-form-all .white {
+    background-color: white;
+}
+
+.school-form-all p {
+    text-align: center;
+    color: #68BC43;
+}
+
+.school-form-all form {
+    margin: 0 auto;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.school-form-all input {
+    border: 0;
+    border-radius: 30px;
+    box-sizing: border-box;
+    width: 100%;
+    max-width: inherit;
+    padding: 7px 30px;
+    height: 60px;
+    background-color: #E1E1E1;
+}
+
+.school-form-white {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.school-form-white input {
+    background-color: white;
+}
+
+.school-form-all .check {
+    background-color: #E1E1E1;
+    box-sizing: border-box;
+    border: 0;
+    padding: 0 10px;
+    width: 100%;
+    height: 60px;
+    margin: 0;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    gap: 5px;
+    max-width: 100%;
+
+}
+
+.school-form-all .check-one {
+    background-color: white;
+}
+
+.school-form-all textarea {
+    border: 0;
+    border-radius: 30px;
+    box-sizing: border-box;
+    width: 100%;
+    max-width: inherit;
+    padding: 12px 30px;
+    height: 250px;
+    background-color: #E1E1E1;
+    box-sizing: border-box;
+}
+
+.school-form-all .check p {
+    vertical-align: middle;
+    position: relative;
+
+    color: rgb(133, 133, 133);
+
+}
+
+
+.school-form-all input[type="radio"] {
+    display: none;
+}
+
+
+.school-form-all .des {
+    display: inline-block;
+    position: relative;
+    width: 15px;
+    height: 15px;
+    background-color: #fff;
+    border: 5px solid #fff;
+    border-radius: 50%;
+
+}
+
+.school-form-all .des-one {
+    background-color: #E1E1E1;
+    border: 5px solid #E1E1E1;
+}
+
+
+.school-form-all .school-form-all .des::after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.school-form-all input[type="radio"]:checked+.des::after {
+    display: block;
+    content: '';
+    width: 15px;
+    height: 15px;
+    background-color: #68BC43;
+    border-radius: 50%;
+
+}
+
+.school-form-all button {
+    align-self: center;
+}
+
+.school-form-all .start {
+    align-self: flex-start;
+}
+
+
+@media screen and (max-width: 1024px) {
+    .school-form-all input {
+        padding: 6px 25px;
+        height: 50px;
+
+    }
+
+    .school-form-all .check {
+        height: 50px;
+    }
+
+    .school-form-all textarea {
+        height: 200px;
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+    .school-form-all input {
+        font-size: 0.8rem;
+        padding: 4px 20px;
+        height: 45px;
+    }
+
+    .school-form-all .both {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .school-form-all .check {
+        height: 45px;
+    }
+
+    .school-form-all textarea {
+        height: 150px;
+        font-size: 0.8rem;
+    }
+
+}
+
+@media screen and (max-width: 480px) {
+    .school-form-all input {
+        font-size: 0.6rem;
+        padding: 3px 15px;
+        height: 35px;
+    }
+
+    .school-form-all .check {
+        height: 35px;
+    }
+
+    .school-form-all textarea {
+        height: 120px;
+        font-size: 0.6rem;
+    }
+
+}

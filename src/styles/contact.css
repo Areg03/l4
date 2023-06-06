@@ -1,0 +1,46 @@
+.contact-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.contact-container .map {
+    width: 80%;
+}
+
+.contact-container iframe {
+    width: 100%;
+    height: 300px;
+    border-radius: 15px;
+}
+
+
+
+.contact-text {
+    line-height: 0;
+
+}
+
+.contact-phone {
+    display: flex;
+    gap: 30px;
+}
+
+.contact-domain p {
+    margin: 0;
+
+    text-transform: none;
+}
+
+
+@media screen and (max-width: 768px) {
+    .contact-container {
+        flex-direction: column;
+        gap: 20px
+    }
+
+    .contact-container .map {
+        width: 100%;
+
+    }
+}
