@@ -152,7 +152,7 @@ header {
   height: 11px;
   border-radius: 50%;
   transition: 250ms;
-  background-color: #68BC43;
+  background-color: #71c74d;
 }
 
 .navactive:hover::after {
@@ -161,7 +161,7 @@ header {
 }
 
 .navactivetel {
-  color: #68BC43;
+  color: #71c74d;
 }
 
 .burger {

@@ -36,7 +36,7 @@ const ServicesAll = ({ t, lang, data }) => {
                 <div>
                     <div className="gallery-cat">
                         {arr.map((i, k) => (
-                            <p key={k} style={{ textAlign: "center", fontSize: 10, width: 180, cursor: "pointer", color: k === 0 ? '#68BC43' : 'black' }} onClick={() => setActive(i.id)}>{i.title}</p>
+                            <p key={k} style={{ textAlign: "center", fontSize: 10, width: 180, cursor: "pointer", color: k === 0 ? '#71c74d' : 'black' }} onClick={() => setActive(i.id)}>{i.title}</p>
                         ))}
                     </div>
                     <div className="gallery-cat-select">

@@ -47,7 +47,7 @@
 }
 
 .single-opinion-title {
-    color: #68BC43;
+    color: #71c74d;
     letter-spacing: 1px;
 }
 
@@ -100,7 +100,7 @@
 .more {
     display: inline-block;
 
-    color: #68BC43;
+    color: #71c74d;
     position: relative;
     cursor: pointer;
     user-select: none;
@@ -129,7 +129,7 @@
     height: 11px;
     border-radius: 50%;
     transition: 250ms;
-    background-color: #68BC43;
+    background-color: #71c74d;
 }
 
 .school .linkdesc .read .more:hover::after {

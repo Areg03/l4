@@ -54,7 +54,7 @@
     font-size: 1.2rem;
     letter-spacing: 1px;
     text-align: center;
-    color: #68BC43;
+    color: #71c74d;
     max-width: 500px;
 }
 
@@ -63,7 +63,7 @@
 }
 
 .other-container .other-last {
-    background-color: #68BC43;
+    background-color: #71c74d;
     cursor: pointer;
     transition: 250ms;
 }

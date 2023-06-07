@@ -77,17 +77,17 @@ const Header = ({ t }) => {
                     </div>
                     <div className='logo' >
                         <Link href='/'><Image src={Logo} width={261} height={82} priority={true} alt="Logo" /></Link>
-                        <nav className='nav-comp'>
-                            <ul className='computer'>
-                                <Link href='/services' ><li className={pathname === "/services" ? "navactive" : ""}>{t("services")}</li></Link>
-                                <Link href='/course'><li className={pathname === "/course" ? "navactive" : ""}>{t("course")}</li></Link>
-                                <Link href='/gallery'><li className={pathname === "/gallery" ? "navactive" : ""}>{t("gallery")}</li></Link>
-                                <Link href='/contact'><li className={pathname === "/contact" ? "navactive" : ""}>{t("contact")}</li></Link>
-                            </ul>
 
-                        </nav>
                     </div>
+                    <nav className='nav-comp'>
+                        <ul className='computer'>
+                            <Link href='/services' ><li className={pathname === "/services" ? "navactive" : ""}>{t("services")}</li></Link>
+                            <Link href='/course'><li className={pathname === "/course" ? "navactive" : ""}>{t("course")}</li></Link>
+                            <Link href='/gallery'><li className={pathname === "/gallery" ? "navactive" : ""}>{t("gallery")}</li></Link>
+                            <Link href='/contact'><li className={pathname === "/contact" ? "navactive" : ""}>{t("contact")}</li></Link>
+                        </ul>
 
+                    </nav>
                     <div className='drosh'>
                         {/* <Image src={Search} alt="Search" /> */}
                         {/* <Select styles={customStyles} options={options} isSearchable={false} value={options[0]} onChange={(e) => router.push({ pathname, query }, asPath, { locale: e.target.value })} /> */}

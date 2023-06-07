@@ -5,8 +5,9 @@ import Geolocation from '../../../public/images/geolocation.png'
 import Phone from '../../../public/images/phone.png'
 import FB from '../../../public/images/facebook.png'
 import Insta from '../../../public/images/instagram.png'
-import Google from '../../../public/images/google.png'
-import Twitter from '../../../public/images/twitter.png'
+import Whats from '../../../public/images/whatsapp.png'
+import Viber from '../../../public/images/viber.png'
+import Telega from '../../../public/images/telegram.png'
 
 const Footer = ({ t, data, lang, links }) => {
 
@@ -16,7 +17,7 @@ const Footer = ({ t, data, lang, links }) => {
         <>
             <footer>
                 <article>
-                    <section className='footlogo'><Image src={Logo} width={162} height={51} priority={true} alt="Logo" /></section>
+                    <section className='footlogo'><Image src={Logo} width={200} height={62} priority={true} alt="Logo" /></section>
                     <section className='useful'>
                         <h3>{t("useful")}</h3>
                         {links.map((item, k) => (
@@ -27,17 +28,18 @@ const Footer = ({ t, data, lang, links }) => {
                         <h3>{t("contactUs")}</h3>
                         <p className='item'><Image src={Mail} style={{ marginRight: 10 }} alt="mail" />{" " + t("email")}: {data[0].email}</p>
                         <p className='item'><Image src={Geolocation} style={{ marginRight: 10 }} alt="adress" />{" "}{data[0][`address_${lang}`]}</p>
-                        <div className="item" style={{ display: 'flex', alignItems: 'center' }} ><Image src={Phone} style={{ marginRight: 10 }} alt="phone" /> <p style={{ margin: '9px 0 9px' }} className='phone'>{data[0].phone_number}</p></div>
-                        <div className="item" style={{ display: 'flex', alignItems: 'center' }} ><Image src={Phone} style={{ marginRight: 10 }} alt="phone" /> <p style={{ margin: '9px 0 9px' }} className='phone'>{data[0].phone_number}</p></div>
-                        <div className="item" style={{ display: 'flex', alignItems: 'center' }} ><Image src={Phone} style={{ marginRight: 10 }} alt="phone" /> <p style={{ margin: '9px 0 9px' }} className='phone'>{data[0].phone_number}</p></div>
-                        <div className="item" style={{ display: 'flex', alignItems: 'center' }} ><Image src={Phone} style={{ marginRight: 10 }} alt="phone" /> <p style={{ margin: '9px 0 9px' }} className='phone'>{data[0].phone_number}</p></div>                    </section>
+                        <div className="item" style={{ display: 'flex', alignItems: 'center' }} ><Image src={Phone} style={{ marginRight: 10 }} alt="phone" /> <p style={{ margin: '9px 0 9px', whiteSpace: 'pre-wrap' }} className='phone'>{data[0].phone_number}</p></div>
+                        <div className="item" style={{ display: 'flex', alignItems: 'center' }} ><Image src={Phone} style={{ marginRight: 10 }} alt="phone" /> <p style={{ margin: '9px 0 9px' }} className='phone'>{data[0].phone_number2}</p></div>
+                        <div className="item" style={{ display: 'flex', alignItems: 'center' }} ><Image src={Phone} style={{ marginRight: 10 }} alt="phone" /> <p style={{ margin: '9px 0 9px' }} className='phone'>{data[0].phone_number3}</p></div>
+                        <div className="item" style={{ display: 'flex', alignItems: 'center' }} ><Image src={Phone} style={{ marginRight: 10 }} alt="phone" /> <p style={{ margin: '9px 0 9px' }} className='phone'>{data[0].phone_number4}</p></div>                    </section>
                     <section className='find'>
                         <h3>{t("find")}</h3>
                         <div className="finditem">
                             <a href={data[0].facebook} target="_blank">  <Image src={FB} alt="facebook" /></a>
                             <a href={data[0].instagram} target="_blank">     <Image src={Insta} alt="instagram" /></a>
-                            <a href={data[0].google_plus} target="_blank">    <Image src={Google} alt="google-plus" /></a>
-                            <a href={data[0].twitter} target="_blank">     <Image src={Twitter} alt="twitter" /></a>
+                            <a href={data[0].google_plus} target="_blank">    <Image src={Whats} alt="whatsapp" /></a>
+                            <a href={data[0]?.twitter} target="_blank">     <Image src={Viber} alt="twitter" /></a>
+                            <a href={data[0]?.Viber} target="_blank">     <Image src={Telega} alt="twitter" /></a>
                         </div>
                     </section>
                 </article>
