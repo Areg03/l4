@@ -47,7 +47,7 @@
 }
 
 .single-opinion-title {
-    color: #71c74d;
+    color: rgba(64, 125, 43, 1);
     letter-spacing: 1px;
 }
 
@@ -100,7 +100,7 @@
 .more {
     display: inline-block;
 
-    color: #71c74d;
+    color: rgba(64, 125, 43, 1);
     position: relative;
     cursor: pointer;
     user-select: none;
@@ -129,7 +129,7 @@
     height: 11px;
     border-radius: 50%;
     transition: 250ms;
-    background-color: #71c74d;
+    background-color: rgba(64, 125, 43, 1);
 }
 
 .school .linkdesc .read .more:hover::after {

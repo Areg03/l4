@@ -38,7 +38,7 @@ body.modal-open {
 
   /* Handle */
   ::-webkit-scrollbar-thumb {
-    background: #71c74d;
+    background: rgba(64, 125, 43, 1);
     transition: 250ms;
     border-radius: 10px;
   }
@@ -90,7 +90,7 @@ main {
 button {
 
 
-  background: linear-gradient(to bottom, #96dd77 0%, #71c74d 100%);
+  background: linear-gradient(to bottom, rgba(110, 204, 77, 1) 0%, rgba(64, 125, 43, 1) 100%);
   color: white;
   border: 2px solid #45852e;
   text-align: center;
@@ -105,13 +105,13 @@ button {
 }
 
 button:hover {
-  background: linear-gradient(to bottom, #71c74d 0%, #96dd77 100%);
+  background: linear-gradient(to bottom, rgba(64, 125, 43, 1) 0%, rgba(110, 204, 77, 1) 100%);
 }
 
 h2 {
   font-size: 3.1rem;
   font-weight: 400;
-  color: #71c74d;
+  color: rgba(64, 125, 43, 1);
   text-transform: uppercase;
 }
 
@@ -197,7 +197,7 @@ fieldset {
   right: -15px;
   width: 40px;
   height: 40px;
-  background-color: #71c74d;
+  background-color: rgba(64, 125, 43, 1);
   transition-duration: 250ms;
   cursor: pointer;
   display: flex;
@@ -209,7 +209,7 @@ fieldset {
 }
 
 .green {
-  color: #71c74d;
+  color: rgba(64, 125, 43, 1);
 }
 
 .galImg {
@@ -265,7 +265,7 @@ button[disabled] {
 }
 
 .all-arrow {
-  background-color: #71c74d;
+  background-color: rgba(64, 125, 43, 1);
   width: 45px;
   height: 45px;
   border-radius: 50%;
@@ -491,4 +491,8 @@ button[disabled] {
     right: 60px;
 
   }
+}
+
+.white {
+  color: white !important;
 }

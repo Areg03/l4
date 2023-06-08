@@ -43,18 +43,19 @@
 }
 
 .other-container .country {
-    background-color: #D9D9D9;
+    background-color: #838B7F;
     display: flex;
     flex-direction: column;
+    color: white;
     align-items: center;
     /* padding: 20px; */
 }
 
-.other-container .country h4 {
+S .other-container .country h4 {
     font-size: 1.2rem;
     letter-spacing: 1px;
     text-align: center;
-    color: #71c74d;
+    color: rgba(64, 125, 43, 1);
     max-width: 500px;
 }
 
@@ -63,7 +64,7 @@
 }
 
 .other-container .other-last {
-    background-color: #71c74d;
+    background-color: rgba(64, 125, 43, 1);
     cursor: pointer;
     transition: 250ms;
 }

@@ -4,22 +4,34 @@ import nextI18nextConfig from "../../../next-i18next.config";
 import Gallery from "@/containers/gallery";
 import { useTranslation } from "next-i18next";
 import { useRouter } from "next/router";
-import { categoryApi, contactApi, galleryItemApi, linkApi } from "@/store";
+import { categoryApi, contactApi, galleryApi, galleryItemApi, linkApi } from "@/store";
 
-const GalleryContainerItem = ({ contact, links, category, gallery }) => {
+const GalleryContainerItem = ({ category, gallery, }) => {
     const { t } = useTranslation('common')
     const { locale } = useRouter()
-    console.log(gallery, 'asd')
     return (
-        <HelmetLayout title={t("gallery")} t={t} footer={contact} links={links} lang={locale}>
+        <HelmetLayout title={t("gallery")} t={t} lang={locale}>
             <Gallery lang={locale} category={category} t={t} gallery={gallery} />
         </HelmetLayout>
     );
 }
 
-export async function getServerSideProps({ locale, params }) {
-    const contact = await contactApi(locale)
-    const links = await linkApi(locale)
+export async function getStaticPaths() {
+    // Call an external API endpoint to get posts
+    const gallery = await galleryApi();
+
+    // Get the paths we want to pre-render based on posts
+    const paths = gallery.map((post) => ({
+        params: { id: post.id.toString() },
+    }));
+
+    // We'll pre-render only these paths at build time.
+    // { fallback: false } means other routes should 404.
+    return { paths, fallback: false };
+}
+
+export async function getStaticProps({ locale, params }) {
+
     const category = await categoryApi(locale)
     const gallery = await galleryItemApi(params.id)
     return {
@@ -29,11 +41,12 @@ export async function getServerSideProps({ locale, params }) {
             ],
                 nextI18nextConfig,
             )),
-            contact,
-            links,
+
             category,
-            gallery
+            gallery,
+
         },
+        revalidate: 30,
     }
 }
 

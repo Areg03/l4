@@ -25,10 +25,8 @@ const Carousel = ({ children, one, center }) => {
             const asd = setTimeout(() => {
                 if (one) {
                     if (position === children.length - 1) {
-                        console.log(position, 'qqqqqqqqqqqq')
                         setPosition(0);
                     } else {
-                        console.log(position, 'ppppppppppp')
 
                         setPosition(prev => prev + 1);
                     }

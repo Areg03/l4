@@ -14,7 +14,7 @@ const ContactContainer = ({ title, t, data, lang }) => {
                     <p style={{ fontWeight: 'bold' }}>{t("l4")} </p>
                     <p style={{ fontWeight: 'bold' }}>{t("spy")}</p>
                 </div>
-                <p>{t("smile")}</p>
+                <p>{t("call")}</p>
                 <p>{t("daysdemo")}</p>
                 <div className="contact-text" >
                     <p >{t("days")} </p>
@@ -23,7 +23,7 @@ const ContactContainer = ({ title, t, data, lang }) => {
                 <p>{t("entered")}</p>
 
                 <p>{data[0][`address_${lang}`]}</p>
-                <p>{t("call")}</p>
+                <p>{t("smile")}</p>
                 <div className="contact-phone">
                     <div className="contact-text" >
                         <div style={{ display: 'flex', alignItems: 'center' }} ><Image src={Mail} style={{ marginRight: 10 }} alt="phone" /> <p style={{ margin: '9px 0 9px' }} className='phone'>{data[0].email}</p></div>
@@ -36,7 +36,7 @@ const ContactContainer = ({ title, t, data, lang }) => {
                         <p>{data[0].email}</p>
                     </div> */}
                 </div>
-                <iframe id="gmap_canvas" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d24371.632632813984!2d44.4904227!3d40.2212051!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x406abdc903935bb3%3A0x1bf2564005d8a2a1!2sL4%20Accounting%20center!5e0!3m2!1shy!2sam!4v1686119041637!5m2!1shy!2sam" allowfullscreen loading="lazy"></iframe>
+                <iframe id="gmap_canvas" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d24371.632632813984!2d44.4904227!3d40.2212051!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x406abdc903935bb3%3A0x1bf2564005d8a2a1!2sL4%20Accounting%20center!5e0!3m2!1shy!2sam!4v1686119041637!5m2!1shy!2sam" allowFullScreen loading="lazy"></iframe>
             </div>
             <ContactForm t={t} />
         </section>

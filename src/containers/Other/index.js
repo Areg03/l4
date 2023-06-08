@@ -37,7 +37,7 @@ const Other = ({ t, data, lang }) => {
                         {data.map((i, k) => (
                             <div key={k} className="soren-item">
                                 <h5 className="uppercase">{i[`title_${lang}`]}</h5>
-                                <h4 className="secondary uppercase black">{i[`description_${lang}`]}</h4>
+                                <h4 className="secondary uppercase white">{i[`description_${lang}`]}</h4>
                             </div>
                         ))}
 
@@ -54,9 +54,9 @@ const Other = ({ t, data, lang }) => {
 
                     </fieldset>
                 </div> */}
-                    <a href="" target="_blank" className="other-box country other-last gray" >
+                    <a href="" target="_blank" className="other-box country  " >
                         <div style={{ paddingLeft: 10, paddingRight: 10 }}>
-                            <h3 className="secondary uppercase green other-last-text other-last-none">{t("cost")}
+                            <h3 className="secondary uppercase green other-last-text other-last-none white">{t("cost")}
                             </h3>
                         </div>
                     </a>
@@ -65,7 +65,7 @@ const Other = ({ t, data, lang }) => {
 
 
                 <a href="https://file-online.taxservice.am/pages/loginPage.jsf" target="_blank" className="other-box country other-last" >
-                    <h3 className="secondary uppercase green other-last-text">{t("electro")}
+                    <h3 className="secondary uppercase green other-last-text black">{t("electro")}
                     </h3>
 
                 </a>

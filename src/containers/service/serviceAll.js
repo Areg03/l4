@@ -4,6 +4,7 @@ import Image from "next/image";
 import { pictureKey } from "@/store/key";
 import Modal from "@/components/Modal";
 import OpinionForm from "../forms/opinionForm";
+import CallForm from "../forms/callForm";
 
 const ServicesAll = ({ t, lang, data }) => {
     const [isOpen, setIsOpen] = useState(false)
@@ -12,8 +13,8 @@ const ServicesAll = ({ t, lang, data }) => {
         { id: 1, title: t("first"), },
         { id: 2, title: t("second"), },
         { id: 3, title: t("third"), },
-        { id: 4, title: t("four"), },
-        { id: 5, title: t("five"), },
+        { id: 4, title: t("five"), },
+        { id: 5, title: t("four"), },
     ]
 
     useEffect(() => {
@@ -36,7 +37,7 @@ const ServicesAll = ({ t, lang, data }) => {
                 <div>
                     <div className="gallery-cat">
                         {arr.map((i, k) => (
-                            <p key={k} style={{ textAlign: "center", fontSize: 10, width: 180, cursor: "pointer", color: k === 0 ? '#71c74d' : 'black' }} onClick={() => setActive(i.id)}>{i.title}</p>
+                            <p key={k} style={{ textAlign: "center", fontSize: 12, fontWeight: 700, width: 180, cursor: "pointer", color: k === 0 ? 'rgba(64, 125, 43, 1)' : 'black' }} onClick={() => setActive(i.id)}>{i.title}</p>
                         ))}
                     </div>
                     <div className="gallery-cat-select">
@@ -76,7 +77,7 @@ const ServicesAll = ({ t, lang, data }) => {
                 ))}
             </div>
             <Modal middle isOpen={isOpen} setIsOpen={setIsOpen}>
-                <OpinionForm other t={t} />
+                <CallForm other t={t} />
             </Modal>
         </>);
 }

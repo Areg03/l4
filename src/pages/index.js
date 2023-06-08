@@ -13,14 +13,15 @@ import nextI18NextConfig from '../../next-i18next.config.js'
 import { aboutApi, bannerApi, contactApi, contentSliderApi, linkApi, partnerApi, serviceApi, sliderApi, teamApi } from "@/store/index.js";
 import { useRouter } from "next/router.js";
 
-const Home = ({ banner, slider, contact, links, about, team, partner, content, services }) => {
+const Home = ({ banner, slider, contact, about, team, partner, content, services }) => {
   const { t } = useTranslation('common')
   const { locale } = useRouter()
   return (
-    <HelmetLayout title={t("title")} t={t} footer={contact} links={links} lang={locale}>
+    <HelmetLayout title={t("title")} t={t} footer={contact} lang={locale}>
       <Video t={t} data={content} lang={locale} />
       <div className="container">
         <h1 className="h1red">{slider[0][`title_${locale}`]}</h1>
+        <h3 className="h3red">{t("masnag")}</h3>
       </div>
       <AboutUs t={t} lang={locale} data={about} />
       {/* <SchoolLink t={t} data={banner} lang={locale} /> */}
@@ -37,7 +38,6 @@ export async function getStaticProps({ locale }) {
   const banner = await bannerApi(locale)
   const slider = await sliderApi(locale)
   const contact = await contactApi(locale)
-  const links = await linkApi(locale)
   const about = await aboutApi(locale)
   const team = await teamApi(locale)
   const partner = await partnerApi(locale)
@@ -53,13 +53,13 @@ export async function getStaticProps({ locale }) {
       banner,
       slider,
       contact,
-      links,
       about,
       team,
       partner,
       content,
-      services
+      services,
     },
+    revalidate: 120,
   }
 }
 

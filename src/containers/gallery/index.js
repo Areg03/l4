@@ -31,11 +31,11 @@ const Gallery = ({ category, lang, t, gallery }) => {
         <>
             <div className="container ">
                 <div className="gallery-cat">
-                    <Link href='/gallery' className={router.pathname === '/gallery' ? "green" : ""} >
+                    <Link href='/gallery' style={{ fontWeight: 700 }} className={router.pathname === '/gallery' ? "green" : ""} >
                         {t("l4main")}
                     </Link>
                     {category?.map((i, k) => (
-                        <Link href={`/gallery/${k + 1}`} className={id == i.id ? "green" : ""} key={k}>
+                        <Link href={`/gallery/${k + 1}`} style={{ fontWeight: 700 }} className={id == i.id ? "green" : ""} key={k}>
                             {i[`title_${lang}`]}
 
                         </Link>

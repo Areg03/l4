@@ -5,12 +5,12 @@ import { useTranslation } from "next-i18next";
 import { contactApi, linkApi } from "@/store";
 import { useRouter } from "next/router";
 
-const Custom404 = ({ contact, links, }) => {
+const Custom404 = () => {
     const { t } = useTranslation('common')
     const { locale } = useRouter()
 
     return (
-        <HelmetLayout title={'404 page'} t={t} footer={contact} links={links} lang={locale}>
+        <HelmetLayout title={'404 page'} t={t} lang={locale}>
             <div style={{ display: 'flex', justifyContent: 'center', }}>
                 <h1>404 - Page Not Found</h1>
             </div>
@@ -19,8 +19,7 @@ const Custom404 = ({ contact, links, }) => {
 }
 
 export async function getStaticProps({ locale }) {
-    const contact = await contactApi(locale)
-    const links = await linkApi(locale)
+
 
     return {
         props: {
@@ -29,10 +28,8 @@ export async function getStaticProps({ locale }) {
             ],
                 nextI18nextConfig,
             )),
-            contact,
-            links,
+
         },
-        revalidate: 120,
     }
 }
 

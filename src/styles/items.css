@@ -36,7 +36,7 @@
     height: 40px;
     font-size: 2rem;
     color: white;
-    background-color: #71c74d;
+    background-color: rgba(64, 125, 43, 1);
     cursor: pointer;
     display: flex;
     justify-content: center;

@@ -6,20 +6,20 @@ import { useTranslation } from "next-i18next";
 import { useRouter } from "next/router";
 import { categoryApi, contactApi, galleryApi, linkApi } from "@/store";
 
-const GalleryContainer = ({ contact, links, category, gallery }) => {
+const GalleryContainer = ({ category, gallery }) => {
     const { t } = useTranslation('common')
     const { locale } = useRouter()
-
     return (
-        <HelmetLayout title={t("gallery")} t={t} footer={contact} links={links} lang={locale}>
+        <HelmetLayout title={t("gallery")} t={t} lang={locale}>
             <Gallery lang={locale} category={category} gallery={gallery} t={t} />
         </HelmetLayout>
     );
 }
 
-export async function getServerSideProps({ locale }) {
-    const contact = await contactApi(locale)
-    const links = await linkApi(locale)
+
+export async function getStaticProps({ locale }) {
+
+
     const category = await categoryApi(locale)
     const gallery = await galleryApi()
     return {
@@ -29,11 +29,11 @@ export async function getServerSideProps({ locale }) {
             ],
                 nextI18nextConfig,
             )),
-            contact,
-            links,
+
             category,
             gallery
         },
+        revalidate: 30,
     }
 }
 

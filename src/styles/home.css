@@ -47,6 +47,15 @@
     margin: 0;
 }
 
+.h3red {
+    font-size: 2.1rem;
+    max-width: 1000px;
+    font-weight: 400;
+    color: #FF1726;
+    white-space: pre-line;
+    margin: 0;
+}
+
 .videotext p {
     color: white;
     font-weight: bold;
@@ -104,6 +113,10 @@
         font-size: 2.5rem;
     }
 
+    .h3red {
+        font-size: 2rem;
+    }
+
     .first {
         flex-direction: column;
     }
@@ -116,6 +129,10 @@
 
     .h1red {
         font-size: 1.6rem;
+    }
+
+    .h3red {
+        font-size: 1.3rem;
     }
 
     .videotext p {
@@ -161,6 +178,10 @@
 
     .h1red {
         font-size: 1.35rem;
+    }
+
+    .h3red {
+        font-size: 1.1rem;
     }
 
     .videotext p {

@@ -36,7 +36,7 @@ const OpinionForm = ({ other, t, }) => {
     }
     return (
         <section className={other ? "school-form-all" : "school-form-all school-form-white"}>
-            <h2>{t("register")}</h2>
+            <h2>{t("sendop")}</h2>
 
             <form onSubmit={handleSubmit(onSubmit)}>
 

@@ -22,7 +22,7 @@
 
 .school-form-all p {
     text-align: center;
-    color: #71c74d;
+    color: rgba(64, 125, 43, 1);
 }
 
 .school-form-all form {
@@ -128,7 +128,7 @@
     content: '';
     width: 15px;
     height: 15px;
-    background-color: #71c74d;
+    background-color: rgba(64, 125, 43, 1);
     border-radius: 50%;
 
 }

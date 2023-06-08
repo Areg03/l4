@@ -13,8 +13,8 @@ const Service = ({ t, data, lang }) => {
         { id: 1, title: t("first"), link: '/services', icon: OrgReg },
         { id: 2, title: t("second"), link: '/services', icon: Second },
         { id: 3, title: t("third"), link: '/services', icon: Condition },
-        { id: 4, title: t("four"), link: '/services', icon: Scales },
-        { id: 5, title: t("five"), link: '/services', icon: First },
+        { id: 4, title: t("four"), link: '/services', icon: First },
+        { id: 5, title: t("five"), link: '/services', icon: Scales },
     ]
 
     return (
