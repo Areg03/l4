@@ -23,7 +23,7 @@ const SchoolLink = ({ data }) => {
                     <Modal middle text={t("register")} isOpen={isOpen} setIsOpen={setIsOpen} butt>
                         <SchoolForm other t={t} />
                     </Modal>
-                    <Link href='/course'><p className="more">{t("read")}</p></Link>
+                    <Link href='/course' locale={locale}><p className="more">{t("read")}</p></Link>
                 </div>
             </div>
             <div className="linkimg">

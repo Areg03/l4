@@ -78,15 +78,15 @@ const Header = () => {
 
                     </div>
                     <div className='logo' >
-                        <Link href='/'><Image src={Logo} width={261} height={82} priority={true} alt="Logo" /></Link>
+                        <Link href='/' locale={locale}><Image src={Logo} width={261} height={82} priority={true} alt="Logo" /></Link>
 
                     </div>
                     <nav className='nav-comp'>
                         <ul className='computer'>
-                            <Link href='/services' ><li className={pathname === "/services" ? "navactive" : ""}>{t("services")}</li></Link>
-                            <Link href='/course'><li className={pathname === "/course" ? "navactive" : ""}>{t("course")}</li></Link>
-                            <Link href='/gallery'><li className={pathname === "/gallery" ? "navactive" : ""}>{t("gallery")}</li></Link>
-                            <Link href='/contact'><li className={pathname === "/contact" ? "navactive" : ""}>{t("contact")}</li></Link>
+                            <Link href='/services' locale={locale}><li className={pathname === "/services" ? "navactive" : ""}>{t("services")}</li></Link>
+                            <Link href='/course' locale={locale}><li className={pathname === "/course" ? "navactive" : ""}>{t("course")}</li></Link>
+                            <Link href='/gallery' locale={locale}><li className={pathname === "/gallery" ? "navactive" : ""}>{t("gallery")}</li></Link>
+                            <Link href='/contact' locale={locale}><li className={pathname === "/contact" ? "navactive" : ""}>{t("contact")}</li></Link>
                         </ul>
 
                     </nav>
@@ -132,10 +132,10 @@ const Header = () => {
                     <div className={checked ? 'burger-menu-active' : 'burger-menu'}>
                         <nav className='nav-tel'>
                             <ul className='telephone'>
-                                <Link href='/services' ><li className={pathname === "/services" ? "navactivetel" : ""}>{t("services")}</li></Link>
-                                <Link href='/course'><li className={pathname === "/course" ? "navactivetel" : ""}>{t("course")}</li></Link>
-                                <Link href='/gallery'><li className={pathname === "/gallery" ? "navactivetel" : ""}>{t("gallery")}</li></Link>
-                                <Link href='/contact'><li className={pathname === "/contact" ? "navactivetel" : ""}>{t("contact")}</li></Link>
+                                <Link href='/services' locale={locale} ><li className={pathname === "/services" ? "navactivetel" : ""}>{t("services")}</li></Link>
+                                <Link href='/course' locale={locale}><li className={pathname === "/course" ? "navactivetel" : ""}>{t("course")}</li></Link>
+                                <Link href='/gallery' locale={locale}><li className={pathname === "/gallery" ? "navactivetel" : ""}>{t("gallery")}</li></Link>
+                                <Link href='/contact' locale={locale}><li className={pathname === "/contact" ? "navactivetel" : ""}>{t("contact")}</li></Link>
                             </ul>
                         </nav>
                     </div>

@@ -38,7 +38,7 @@ const Footer = ({ }) => {
         <>
             <footer>
                 <article>
-                    <section className='footlogo'><Link href='/'><Image src={Logo} width={200} height={62} priority={true} alt="Logo" /></Link></section>
+                    <section className='footlogo'><Link href='/' locale={locale}><Image src={Logo} width={200} height={62} priority={true} alt="Logo" /></Link></section>
                     <section className='useful'>
                         <h3>{t("useful")}</h3>
                         {links?.map((item, k) => (
