@@ -1,6 +1,6 @@
 import HelmetLayout from "@/containers/layout";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
-import nextI18nextConfig from "../../../next-i18next.config";
+import nextI18NextConfig from "../../../next-i18next.config";
 import Gallery from "@/containers/gallery";
 import { useTranslation } from "next-i18next";
 import { useRouter } from "next/router";
@@ -23,11 +23,10 @@ export async function getStaticProps({ locale }) {
     const gallery = await galleryApi()
     return {
         props: {
-            ...(await serverSideTranslations(locale, [
-                'common'
-            ],
-                nextI18nextConfig,
-            )),
+            ...(await serverSideTranslations(locale, ['common'], {
+                i18n: nextI18NextConfig.i18n,
+                loadPaths: ['public/locales'],
+            })),
 
             category,
             gallery

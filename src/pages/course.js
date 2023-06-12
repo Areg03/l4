@@ -4,7 +4,7 @@ import Register from "@/containers/register";
 import School from "@/containers/school";
 import { useTranslation } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
-import nextI18nextConfig from "../../next-i18next.config";
+import nextI18NextConfig from "../../next-i18next.config";
 import { bannerApi, contactApi, linkApi, opinionApi } from "@/store";
 import { useRouter } from "next/router";
 
@@ -29,11 +29,10 @@ export async function getStaticProps({ locale }) {
     const opinion = await opinionApi(locale)
     return {
         props: {
-            ...(await serverSideTranslations(locale, [
-                'common'
-            ],
-                nextI18nextConfig,
-            )),
+            ...(await serverSideTranslations(locale, ['common'], {
+                i18n: nextI18NextConfig.i18n,
+                loadPaths: ['public/locales'],
+            })),
 
             banner,
             opinion

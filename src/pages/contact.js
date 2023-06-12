@@ -1,7 +1,7 @@
 import ContactContainer from "@/containers/contact";
 import HelmetLayout from "@/containers/layout";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
-import nextI18nextConfig from "../../next-i18next.config";
+import nextI18NextConfig from "../../next-i18next.config";
 import { useTranslation } from 'react-i18next';
 import { contactApi, linkApi } from "@/store";
 import { useRouter } from "next/router";
@@ -19,11 +19,10 @@ export async function getStaticProps({ locale }) {
     const contact = await contactApi(locale)
     return {
         props: {
-            ...(await serverSideTranslations(locale, [
-                'common'
-            ],
-                nextI18nextConfig,
-            )),
+            ...(await serverSideTranslations(locale, ['common'], {
+                i18n: nextI18NextConfig.i18n,
+                loadPaths: ['public/locales'],
+            })),
             contact,
         },
         revalidate: 60,

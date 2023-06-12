@@ -43,11 +43,10 @@ export async function getStaticProps({ locale }) {
   const services = await serviceApi(locale)
   return {
     props: {
-      ...(await serverSideTranslations(locale, [
-        'common'
-      ],
-        nextI18NextConfig,
-      )),
+      ...(await serverSideTranslations(locale, ['common'], {
+        i18n: nextI18NextConfig.i18n,
+        loadPaths: ['public/locales'],
+      })),
       slider,
       contact,
       about,
