@@ -9,7 +9,7 @@ import '@/styles/about.css'
 import '@/styles/contact.css'
 import '@/styles/other.css'
 import { appWithTranslation } from 'next-i18next';
-import i18n from '../../i18n';
+import { i18n } from '../../i18n';
 
 function App({ Component, pageProps }) {
 
