@@ -16,18 +16,18 @@ import { useState } from 'react';
 const Footer = ({ t, lang, }) => {
     const [data, setContact] = useState()
     const [links, setLinks] = useState()
-    useEffect(() => {
-        const dataFetch = async () => {
-            const contact = await contactApi(lang)
-            setContact(contact)
-        }
-        const linkFetch = async () => {
-            const links = await linkApi(lang)
-            setLinks(links)
-        }
-        linkFetch()
-        dataFetch()
-    }, [lang])
+    // useEffect(() => {
+    //     const dataFetch = async () => {
+    //         const contact = await contactApi(lang)
+    //         setContact(contact)
+    //     }
+    //     const linkFetch = async () => {
+    //         const links = await linkApi(lang)
+    //         setLinks(links)
+    //     }
+    //     linkFetch()
+    //     dataFetch()
+    // }, [lang])
 
     const year = new Date().getFullYear()
     return (
