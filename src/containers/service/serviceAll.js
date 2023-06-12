@@ -5,8 +5,12 @@ import { pictureKey } from "@/store/key";
 import Modal from "@/components/Modal";
 import OpinionForm from "../forms/opinionForm";
 import CallForm from "../forms/callForm";
+import { useTranslation } from "next-i18next";
+import { useRouter } from "next/router";
 
-const ServicesAll = ({ t, lang, data }) => {
+const ServicesAll = ({ data }) => {
+    const { t } = useTranslation('common')
+    const { locale } = useRouter()
     const [isOpen, setIsOpen] = useState(false)
     const [active, setActive] = useState(0)
     const arr = [
@@ -54,8 +58,8 @@ const ServicesAll = ({ t, lang, data }) => {
                         {k % 2 === 0 ?
                             <div className="container-image">
                                 <div className="text" onClick={(e) => e.stopPropagation()}>
-                                    <h4>{i[`title_${lang}`]}</h4>
-                                    <p>{i[`description_${lang}`]}</p>
+                                    <h4>{i[`title_${locale}`]}</h4>
+                                    <p>{i[`description_${locale}`]}</p>
                                     <button onClick={() => setIsOpen(true)}>{t("order")}</button>
                                 </div>
                                 <div className="image">
@@ -67,8 +71,8 @@ const ServicesAll = ({ t, lang, data }) => {
                                     <Image src={pictureKey + i.icon} width={600} height={300} loading='lazy' alt='service-image' />
                                 </div>
                                 <div className="text" onClick={(e) => e.stopPropagation()}>
-                                    <h4>{i[`title_${lang}`]}</h4>
-                                    <p>{i[`description_${lang}`]}</p>
+                                    <h4>{i[`title_${locale}`]}</h4>
+                                    <p>{i[`description_${locale}`]}</p>
                                     <button onClick={() => setIsOpen(true)}>{t("order")}</button>
                                 </div>
 

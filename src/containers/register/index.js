@@ -1,6 +1,8 @@
+import { useTranslation } from "next-i18next";
 import SchoolForm from "../forms/schoolForm";
 
-const Register = ({ t }) => {
+const Register = () => {
+    const { t } = useTranslation('common')
     return (
         <section className="container register">
             <h3 className="light linebox"><span className="line"></span>{t("school")}</h3>

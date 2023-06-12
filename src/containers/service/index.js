@@ -6,9 +6,12 @@ import Second from '../../../public/images/second.png'
 import First from '../../../public/images/first.png'
 import { Fragment } from "react";
 import Carousel from "@/components/slider";
+import { useTranslation } from "next-i18next";
+import { useRouter } from "next/router";
 
-const Service = ({ t, data, lang }) => {
-
+const Service = ({ data }) => {
+    const { t } = useTranslation('common')
+    const { locale } = useRouter()
     const datas = [
         { id: 1, title: t("first"), link: '/services', icon: OrgReg },
         { id: 2, title: t("second"), link: '/services', icon: Second },
@@ -24,7 +27,7 @@ const Service = ({ t, data, lang }) => {
             <Carousel>
                 {data?.map((i, k) => (
                     <Fragment key={k} >
-                        <ServiceItem t={t} title={datas?.[k]?.title} description={i[`title_${lang}`]} id={datas?.[k].id} link={datas?.[k].link} icon={datas?.[k].icon} />
+                        <ServiceItem t={t} title={datas?.[k]?.title} description={i[`title_${locale}`]} id={datas?.[k].id} link={datas?.[k].link} icon={datas?.[k].icon} />
                     </Fragment>
                 ))}
 

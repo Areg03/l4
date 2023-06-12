@@ -11,11 +11,13 @@ import { useRef, useState } from 'react';
 import { useEffect } from 'react';
 import Modal from '@/components/Modal';
 import SchoolForm from '../forms/schoolForm';
+import { useTranslation } from 'next-i18next';
 
 
 
 
-const Header = ({ t }) => {
+const Header = () => {
+    const { t } = useTranslation('common')
     const router = useRouter();
     const { pathname, asPath, query, locale } = router;
 

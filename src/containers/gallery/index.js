@@ -5,8 +5,11 @@ import { pictureKey } from "@/store/key";
 import { useRouter } from "next/router";
 import Test from '../../../public/images/noor.png'
 import Modal from "@/components/Modal";
+import { useTranslation } from "next-i18next";
 
-const Gallery = ({ category, lang, t, gallery }) => {
+const Gallery = ({ category, gallery }) => {
+    const { t } = useTranslation('common')
+    const { locale } = useRouter()
     const router = useRouter()
     const { id } = router.query
     const [active, setActive] = useState(0)
@@ -36,7 +39,7 @@ const Gallery = ({ category, lang, t, gallery }) => {
                     </Link>
                     {category?.map((i, k) => (
                         <Link href={`/gallery/${k + 1}`} style={{ fontWeight: 700 }} className={id == i.id ? "green" : ""} key={k}>
-                            {i[`title_${lang}`]}
+                            {i[`title_${locale}`]}
 
                         </Link>
                     ))}
@@ -45,7 +48,7 @@ const Gallery = ({ category, lang, t, gallery }) => {
                     <select defaultValue={id} onChange={(e) => router.push(`/${e.target.value}`)}>
                         <option value={'gallery'}  >{t("l4main")}</option>
                         {category?.map((i, k) => (
-                            <option key={i.id} value={`gallery/${i.id}`} className={id == i.id ? "green" : ""} >{i[`title_${lang}`]}</option>
+                            <option key={i.id} value={`gallery/${i.id}`} className={id == i.id ? "green" : ""} >{i[`title_${locale}`]}</option>
                         ))}
                     </select>
                 </div>

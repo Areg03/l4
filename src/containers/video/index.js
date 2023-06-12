@@ -2,10 +2,13 @@ import { useTranslation } from 'next-i18next';
 import vid from '../../../public/videoplayback.mp4'
 import { useEffect, useState } from 'react';
 import Other from '../Other';
+import { useRouter } from 'next/router';
 
-const Video = ({ t, data, lang }) => {
+const Video = ({ data }) => {
 
     const [active, setActive] = useState(false)
+    const { t } = useTranslation('common')
+    const { locale } = useRouter()
 
     useEffect(() => {
         if (active) {
@@ -33,13 +36,13 @@ const Video = ({ t, data, lang }) => {
                     {/* <div className='videotext'>
                     <h1>
                         <span>
-                            {data[0][`title_${lang}`]}
+                            {data[0][`title_${locale}`]}
                         </span>
                     </h1>
-                    <p>{data[0][`description_${lang}`]}</p>
+                    <p>{data[0][`description_${locale}`]}</p>
                     <button onClick={() => setActive(true)}>{t("read")}</button>
                 </div> */}
-                    <Other t={t} data={data} lang={lang} />
+                    <Other t={t} data={data} locale={locale} />
                 </div>
             </section>
         </>);

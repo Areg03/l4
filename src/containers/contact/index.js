@@ -3,9 +3,13 @@ import Image from 'next/image';
 
 import Phone from '../../../public/images/phone2.png'
 import Mail from '../../../public/images/mail2.png'
+import { useTranslation } from "next-i18next";
+import { useRouter } from "next/router";
 
 
-const ContactContainer = ({ title, t, data, lang }) => {
+const ContactContainer = ({ title, data }) => {
+    const { t } = useTranslation('common')
+    const { locale } = useRouter()
     return (
         <section className="container contact-container">
             <div className="map">
@@ -22,7 +26,7 @@ const ContactContainer = ({ title, t, data, lang }) => {
                 </div>
                 <p>{t("entered")}</p>
 
-                <p>{data[0][`address_${lang}`]}</p>
+                <p>{data[0][`address_${locale}`]}</p>
                 <p>{t("smile")}</p>
                 <div className="contact-phone">
                     <div className="contact-text" >

@@ -1,9 +1,12 @@
 import Carousel from '@/components/slider';
 import TeamItem from '@/components/teamItem';
+import { useTranslation } from 'next-i18next';
+import { useRouter } from 'next/router';
 import { Fragment } from 'react';
 
-const Team = ({ t, data, lang }) => {
-
+const Team = ({ data, }) => {
+    const { t } = useTranslation('common')
+    const { locale } = useRouter()
 
     return (
         <section className="container">
@@ -11,7 +14,7 @@ const Team = ({ t, data, lang }) => {
             <Carousel>
                 {data?.map((i, key) => (
                     <Fragment key={key} >
-                        <TeamItem name={i[`name_${lang}`]} description={i[`position_${lang}`]} image={i.image} />
+                        <TeamItem name={i[`name_${locale}`]} description={i[`position_${locale}`]} image={i.image} />
                     </Fragment>
                 ))}
             </Carousel>

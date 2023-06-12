@@ -1,10 +1,13 @@
 import Modal from "@/components/Modal";
 import Carousel from "@/components/slider";
+import { useTranslation } from "next-i18next";
 import { useState } from "react";
 import OpinionForm from "../forms/opinionForm";
 
-const Opinion = ({ data, lang, t }) => {
+const Opinion = ({ data, }) => {
+    const { t } = useTranslation('common')
     const [isOpen, setIsOpen] = useState(false)
+
     return (
         <section className="container">
             <h3 className="light linebox"><span className="line"></span>{t("opinions")}</h3>

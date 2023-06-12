@@ -12,22 +12,26 @@ import Link from 'next/link';
 import { useEffect } from 'react';
 import { contactApi, linkApi } from '@/store';
 import { useState } from 'react';
+import { useTranslation } from 'next-i18next';
+import { useRouter } from 'next/router';
 
-const Footer = ({ t, lang, }) => {
+const Footer = ({ }) => {
     const [data, setContact] = useState()
     const [links, setLinks] = useState()
+    const { t } = useTranslation('common')
+    const { locale } = useRouter()
     // useEffect(() => {
     //     const dataFetch = async () => {
-    //         const contact = await contactApi(lang)
+    //         const contact = await contactApi(locale)
     //         setContact(contact)
     //     }
     //     const linkFetch = async () => {
-    //         const links = await linkApi(lang)
+    //         const links = await linkApi(locale)
     //         setLinks(links)
     //     }
     //     linkFetch()
     //     dataFetch()
-    // }, [lang])
+    // }, [locale])
 
     const year = new Date().getFullYear()
     return (
@@ -44,7 +48,7 @@ const Footer = ({ t, lang, }) => {
                     <section className='contact'>
                         <h3>{t("contactUs")}</h3>
                         <p className='item'><Image src={Mail} style={{ marginRight: 10 }} alt="mail" />{" " + t("email")}: {data?.[0].email}</p>
-                        <p className='item'><Image src={Geolocation} style={{ marginRight: 10 }} alt="adress" />{" "}{data?.[0][`address_${lang}`]}</p>
+                        <p className='item'><Image src={Geolocation} style={{ marginRight: 10 }} alt="adress" />{" "}{data?.[0][`address_${locale}`]}</p>
                         <div className="item" style={{ display: 'flex', alignItems: 'center' }} ><Image src={Phone} style={{ marginRight: 10 }} alt="phone" /> <p style={{ margin: '9px 0 9px', whiteSpace: 'pre-wrap' }} className='phone'>{data?.[0].phone_number}</p></div>
                         <div className="item" style={{ display: 'flex', alignItems: 'center' }} ><Image src={Phone} style={{ marginRight: 10 }} alt="phone" /> <p style={{ margin: '9px 0 9px' }} className='phone'>{data?.[0].phone_number2}</p></div>
                         <div className="item" style={{ display: 'flex', alignItems: 'center' }} ><Image src={Phone} style={{ marginRight: 10 }} alt="phone" /> <p style={{ margin: '9px 0 9px' }} className='phone'>{data?.[0].phone_number3}</p></div>

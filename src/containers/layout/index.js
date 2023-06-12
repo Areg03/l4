@@ -2,16 +2,16 @@ import Head from "next/head";
 import Footer from "./footer";
 import Header from "./header";
 
-const HelmetLayout = ({ children, title, t, footer, lang, links }) => {
+const HelmetLayout = ({ children, title, }) => {
     return (<>
         <Head>
             <title>{title}</title>
         </Head>
-        <Header t={t} />
+        <Header />
         <main className="scroll-main">
             {children}
         </main>
-        <Footer t={t} data={footer} lang={lang} links={links} />
+        <Footer />
     </>);
 }
 

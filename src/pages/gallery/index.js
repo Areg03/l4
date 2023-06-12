@@ -8,10 +8,9 @@ import { categoryApi, contactApi, galleryApi, linkApi } from "@/store";
 
 const GalleryContainer = ({ category, gallery }) => {
     const { t } = useTranslation('common')
-    const { locale } = useRouter()
     return (
-        <HelmetLayout title={t("gallery")} t={t} lang={locale}>
-            <Gallery lang={locale} category={category} gallery={gallery} t={t} />
+        <HelmetLayout title={t("gallery")} >
+            <Gallery category={category} gallery={gallery} />
         </HelmetLayout>
     );
 }

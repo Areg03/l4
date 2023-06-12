@@ -8,10 +8,9 @@ import { useRouter } from "next/router";
 
 const Contact = ({ contact, }) => {
     const { t } = useTranslation('common')
-    const { locale } = useRouter()
     return (
-        <HelmetLayout title={t("contact")} t={t} lang={locale}>
-            <ContactContainer t={t} data={contact} lang={locale} />
+        <HelmetLayout title={t("contact")}>
+            <ContactContainer data={contact} />
         </HelmetLayout>
     );
 }

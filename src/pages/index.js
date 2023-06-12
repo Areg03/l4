@@ -13,29 +13,28 @@ import nextI18NextConfig from '../../next-i18next.config.js'
 import { aboutApi, bannerApi, contactApi, contentSliderApi, linkApi, partnerApi, serviceApi, sliderApi, teamApi } from "@/store/index.js";
 import { useRouter } from "next/router.js";
 
-const Home = ({ banner, slider, contact, about, team, partner, content, services }) => {
+const Home = ({ slider, contact, about, team, partner, content, services }) => {
   const { t } = useTranslation('common')
   const { locale } = useRouter()
   return (
-    <HelmetLayout title={t("title")} t={t} footer={contact} lang={locale}>
-      <Video t={t} data={content} lang={locale} />
+    <HelmetLayout title={t("title")}  >
+      <Video data={content} />
       <div className="container">
         <h1 className="h1red">{slider[0][`title_${locale}`]}</h1>
         <h3 className="h3red">{t("masnag")}</h3>
       </div>
-      <AboutUs t={t} lang={locale} data={about} />
+      <AboutUs data={about} />
       {/* <SchoolLink t={t} data={banner} lang={locale} /> */}
-      <Service t={t} lang={locale} data={services} />
-      <Team t={t} lang={locale} data={team} />
+      <Service data={services} />
+      <Team data={team} />
       {/* <Other t={t} lang={locale} data={content} /> */}
-      <Partner t={t} lang={locale} data={partner} />
-      <ContactContainer title t={t} data={contact} lang={locale} />
+      <Partner data={partner} />
+      <ContactContainer title data={contact} />
     </HelmetLayout>
   )
 }
 
 export async function getStaticProps({ locale }) {
-  const banner = await bannerApi(locale)
   const slider = await sliderApi(locale)
   const contact = await contactApi(locale)
   const about = await aboutApi(locale)
@@ -50,7 +49,6 @@ export async function getStaticProps({ locale }) {
       ],
         nextI18NextConfig,
       )),
-      banner,
       slider,
       contact,
       about,

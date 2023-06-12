@@ -8,10 +8,9 @@ import { useRouter } from "next/router";
 
 const Services = ({ services }) => {
     const { t } = useTranslation('common')
-    const { locale } = useRouter()
     return (
-        <HelmetLayout title={t("services")} t={t} lang={locale}>
-            <ServicesAll t={t} lang={locale} data={services} />
+        <HelmetLayout title={t("services")} >
+            <ServicesAll data={services} />
         </HelmetLayout>
     );
 }

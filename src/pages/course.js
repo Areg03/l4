@@ -11,15 +11,14 @@ import { useRouter } from "next/router";
 const Course = ({ banner, opinion }) => {
 
     const { t } = useTranslation('common')
-    const { locale } = useRouter()
 
 
 
     return (
-        <HelmetLayout title={t("course")} t={t} lang={locale}>
-            <School data={banner} lang={locale} />
-            <Register t={t} />
-            <Opinion t={t} data={opinion} lang={locale} />
+        <HelmetLayout title={t("course")} >
+            <School data={banner} />
+            <Register />
+            <Opinion data={opinion} />
         </HelmetLayout>
     );
 }

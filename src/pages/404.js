@@ -6,11 +6,10 @@ import { contactApi, linkApi } from "@/store";
 import { useRouter } from "next/router";
 
 const Custom404 = () => {
-    const { t } = useTranslation('common')
-    const { locale } = useRouter()
+
 
     return (
-        <HelmetLayout title={'404 page'} t={t} lang={locale}>
+        <HelmetLayout title={'404 page'} >
             <div style={{ display: 'flex', justifyContent: 'center', }}>
                 <h1>404 - Page Not Found</h1>
             </div>
