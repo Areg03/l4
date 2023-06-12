@@ -5,15 +5,19 @@ import SchoolForm from "../forms/schoolForm";
 import { pictureKey } from "@/store/key";
 import { useState } from "react";
 import Link from "next/link";
+import { useTranslation } from "next-i18next";
+import { useRouter } from "next/router";
 
-const SchoolLink = ({ t, data, lang }) => {
+const SchoolLink = ({ data }) => {
+    const { t } = useTranslation('common')
+    const { locale } = useRouter()
 
     const [isOpen, setIsOpen] = useState(false);
 
     return (
         <section className="school container">
             <div className="linkdesc">
-                <h2 style={{color: 'red', whiteSpace: 'pre-wrap'}}>{data[0][`title_${lang}`]}</h2>
+                <h2 style={{ color: 'red', whiteSpace: 'pre-wrap' }}>{data[0][`title_${locale}`]}</h2>
                 <p className="text">{t("textbig")}</p>
                 <div className="read">
                     <Modal middle text={t("register")} isOpen={isOpen} setIsOpen={setIsOpen} butt>

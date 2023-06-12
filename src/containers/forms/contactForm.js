@@ -6,8 +6,10 @@ import { useForm } from "react-hook-form";
 import Success from '../../../public/images/success.png'
 import Wrong from '../../../public/images/wrong.png'
 import Image from "next/image";
+import { useTranslation } from "next-i18next";
 
-const ContactForm = ({ t }) => {
+const ContactForm = () => {
+    const { t } = useTranslation('common')
 
     const [isOpen, setIsOpen] = useState(false);
     const [wrong, setWrong] = useState(false)

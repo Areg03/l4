@@ -1,8 +1,12 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import { useTranslation } from "next-i18next";
+
 import OrgReg from '../../../public/images/orgReg.png'
 
-const ServiceItem = ({ t, title, description, link, icon, id }) => {
+const ServiceItem = ({ title, description, link, icon, id }) => {
+    const { t } = useTranslation('common')
+
     return (
         <div className="carousel-item" >
             <Link href={`${link}#${id}`} >

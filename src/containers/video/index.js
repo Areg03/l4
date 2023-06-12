@@ -42,7 +42,7 @@ const Video = ({ data }) => {
                     <p>{data[0][`description_${locale}`]}</p>
                     <button onClick={() => setActive(true)}>{t("read")}</button>
                 </div> */}
-                    <Other t={t} data={data} locale={locale} />
+                    <Other data={data} />
                 </div>
             </section>
         </>);

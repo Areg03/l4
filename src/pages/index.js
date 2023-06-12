@@ -24,10 +24,9 @@ const Home = ({ slider, contact, about, team, partner, content, services }) => {
         <h3 className="h3red">{t("masnag")}</h3>
       </div>
       <AboutUs data={about} />
-      {/* <SchoolLink t={t} data={banner} lang={locale} /> */}
       <Service data={services} />
       <Team data={team} />
-      {/* <Other t={t} lang={locale} data={content} /> */}
+
       <Partner data={partner} />
       <ContactContainer title data={contact} />
     </HelmetLayout>

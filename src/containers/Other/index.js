@@ -1,10 +1,14 @@
 import { useEffect, useRef, useState } from "react";
 import React from 'react';
 import Carousel from "@/components/slider";
+import { useRouter } from "next/router";
+import { useTranslation } from "next-i18next";
 
 
 
-const Other = ({ t, data, lang }) => {
+const Other = ({ data, }) => {
+    const { t } = useTranslation('common')
+    const { locale } = useRouter()
     const someRef = useRef()
     const [checked, setChecked] = useState(false)
     const [active, setActive] = useState('Ընտրել')
@@ -36,8 +40,8 @@ const Other = ({ t, data, lang }) => {
                     <Carousel one center>
                         {data.map((i, k) => (
                             <div key={k} className="soren-item">
-                                <h5 className="uppercase">{i[`title_${lang}`]}</h5>
-                                <h4 className="secondary uppercase white">{i[`description_${lang}`]}</h4>
+                                <h5 className="uppercase">{i[`title_${locale}`]}</h5>
+                                <h4 className="secondary uppercase white">{i[`description_${locale}`]}</h4>
                             </div>
                         ))}
 

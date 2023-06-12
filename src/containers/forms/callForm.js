@@ -6,8 +6,11 @@ import { useState } from "react";
 import axios from "axios";
 import { key } from "@/store/key";
 import Image from "next/image";
+import { useTranslation } from "next-i18next";
 
-const CallForm = ({ other, t, }) => {
+const CallForm = ({ other, }) => {
+    const { t } = useTranslation('common')
+
     const [isOpen, setIsOpen] = useState(false);
     const [wrong, setWrong] = useState(false)
     const { register, formState: { errors, isValid }, handleSubmit, reset } = useForm({
