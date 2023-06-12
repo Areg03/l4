@@ -11,7 +11,7 @@ import { useRef, useState } from 'react';
 import { useEffect } from 'react';
 import Modal from '@/components/Modal';
 import SchoolForm from '../forms/schoolForm';
-import { useTranslation } from 'next-i18next';
+import { appWithTranslation, useTranslation } from 'next-i18next';
 
 
 
@@ -145,4 +145,4 @@ const Header = () => {
     );
 }
 
-export default Header;
+export default appWithTranslation(Header);
