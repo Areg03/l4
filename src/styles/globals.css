@@ -3,6 +3,8 @@
   src: url('../assets/font/Bokonique-Regular.otf');
 }
 
+
+
 html,
 body {
   margin: 0;
@@ -120,6 +122,10 @@ h3 {
   position: relative;
   text-transform: uppercase;
 
+}
+
+.bigh3 {
+  font-size: 1.5rem;
 }
 
 fieldset {
@@ -252,6 +258,10 @@ button[disabled] {
   background-color: black;
 }
 
+.line-red {
+  background-color: red;
+}
+
 .light {
   font-weight: 400;
   letter-spacing: 3px;
@@ -380,6 +390,10 @@ button[disabled] {
     font-size: 1.1rem;
   }
 
+  .bigh3 {
+    font-size: 1.3rem;
+  }
+
   .secondary {
     font-size: 1.7rem;
   }
@@ -418,6 +432,10 @@ button[disabled] {
 
   h3 {
     font-size: 0.85rem;
+  }
+
+  .bigh3 {
+    font-size: 0.95rem;
   }
 
   .secondary {
@@ -472,6 +490,10 @@ button[disabled] {
     font-size: 0.7rem;
   }
 
+  .bigh3 {
+    font-size: 0.8rem;
+  }
+
   h4 {
     font-size: 0.6rem;
   }
@@ -495,4 +517,14 @@ button[disabled] {
 
 .white {
   color: white !important;
+}
+
+.tuyn {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  background-image: url("../../public/images/bg.jpg");
+  background-size: 100% 100%;
+  background-attachment: fixed;
+  /* filter: blur(2px); */
 }

@@ -20,7 +20,8 @@ const Home = ({ slider, contact, about, team, partner, content, services }) => {
     <HelmetLayout title={t("title")}  >
       <Video data={content} />
       <div className="container">
-        <h1 className="h1red">{slider[0][`title_${locale}`]}</h1>
+        <h1 className="h1red">{t("l4")}</h1>
+        <h2 className="h2red">{t("last")}</h2>
         <h3 className="h3red">{t("masnag")}</h3>
       </div>
       <AboutUs data={about} />

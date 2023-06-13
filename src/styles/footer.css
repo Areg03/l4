@@ -5,6 +5,7 @@ footer {
     width: 100%;
     color: white;
     padding: 20px 0;
+    z-index: 1000;
 }
 
 .armcoding {
@@ -13,6 +14,7 @@ footer {
     padding-bottom: 10px;
     text-align: center;
     color: white;
+    z-index: 1000;
 }
 
 footer article {

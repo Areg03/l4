@@ -12,7 +12,7 @@ const Carousel = ({ children, one, center }) => {
                 setPosition(children.length - 1);
             }
             else {
-                setPosition(Math.floor((children.length - 1) / 3));
+                setPosition(Math.floor((children.length - 3)));
             }
         } else {
             setPosition(prev => prev - 1);
@@ -31,7 +31,7 @@ const Carousel = ({ children, one, center }) => {
                         setPosition(prev => prev + 1);
                     }
                 } else {
-                    if (position === Math.floor((children.length - 1) / 3)) {
+                    if (position === Math.floor((children.length - 3))) {
                         setPosition(0);
                     } else {
                         setPosition(prev => prev + 1);
@@ -53,7 +53,7 @@ const Carousel = ({ children, one, center }) => {
                 setPosition(prev => prev + 1);
             }
         } else {
-            if (position === Math.floor((children.length - 1) / 3)) {
+            if (position === Math.floor((children.length - 3))) {
                 setPosition(0);
             } else {
                 setPosition(prev => prev + 1);
@@ -65,7 +65,7 @@ const Carousel = ({ children, one, center }) => {
     return (
         <>
             <div className={one ? "carousel-one" : "carousel"}>
-                <div className="carousel-items" style={center ? { transform: `translateX(-${position * 100}%)` } : { transform: `translateX(-${position * 100}%)` }}>
+                <div className="carousel-items" style={center ? { transform: `translateX(-${position * (one ? 100 : 33.33)}%)` } : { transform: `translateX(-${position * (one ? 100 : 33.33)}%)` }}>
 
                     {children?.map((item, k) => (
                         <Fragment key={k}>

@@ -40,8 +40,8 @@ const Other = ({ data, }) => {
                     <Carousel one center>
                         {data.map((i, k) => (
                             <div key={k} className="soren-item">
-                                <h5 className="uppercase">{i[`title_${locale}`]}</h5>
-                                <h4 className="secondary uppercase white">{i[`description_${locale}`]}</h4>
+                                <h5 className="uppercase black">{i[`title_${locale}`]}</h5>
+                                <h4 className="secondary uppercase black">{i[`description_${locale}`]}</h4>
                             </div>
                         ))}
 
@@ -60,7 +60,7 @@ const Other = ({ data, }) => {
                 </div> */}
                     <a href="" target="_blank" className="other-box country  " >
                         <div style={{ paddingLeft: 10, paddingRight: 10 }}>
-                            <h3 className="secondary uppercase green other-last-text other-last-none white">{t("cost")}
+                            <h3 className="secondary uppercase green other-last-text other-last-none black">{t("cost")}
                             </h3>
                         </div>
                     </a>

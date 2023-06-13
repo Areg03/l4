@@ -8,6 +8,7 @@ const HelmetLayout = ({ children, title, }) => {
             <title>{title}</title>
         </Head>
         <Header />
+        <div className="tuyn"></div>
         <main className="scroll-main">
             {children}
         </main>

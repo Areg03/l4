@@ -47,9 +47,17 @@
     margin: 0;
 }
 
-.h3red {
+.h2red {
     font-size: 2.1rem;
-    max-width: 1000px;
+    font-weight: 400;
+    color: #FF1726;
+    white-space: pre-line;
+    margin: 0;
+}
+
+.h3red {
+    font-size: 1.4rem;
+    max-width: 550px;
     font-weight: 400;
     color: #FF1726;
     white-space: pre-line;
@@ -113,6 +121,10 @@
         font-size: 2.5rem;
     }
 
+    .h2red {
+        font-size: 2.2rem;
+    }
+
     .h3red {
         font-size: 2rem;
     }
@@ -131,8 +143,12 @@
         font-size: 1.6rem;
     }
 
-    .h3red {
+    .h2red {
         font-size: 1.3rem;
+    }
+
+    .h3red {
+        font-size: 1rem;
     }
 
     .videotext p {
@@ -180,8 +196,12 @@
         font-size: 1.35rem;
     }
 
+    .h2red {
+        font-size: 1rem;
+    }
+
     .h3red {
-        font-size: 1.1rem;
+        font-size: 0.75rem;
     }
 
     .videotext p {
