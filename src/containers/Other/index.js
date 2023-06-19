@@ -58,9 +58,9 @@ const Other = ({ data, }) => {
 
                     </fieldset>
                 </div> */}
-                    <a href="" target="_blank" className="other-box country  " >
+                    <a href="" target="_blank" className="other-box country  "  >
                         <div style={{ paddingLeft: 10, paddingRight: 10 }}>
-                            <h3 className="secondary uppercase green other-last-text other-last-none black">{t("cost")}
+                            <h3 className="secondary uppercase green other-last-text other-last-none black" style={{ margin: 8 }}>{t("cost")}
                             </h3>
                         </div>
                     </a>

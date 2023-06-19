@@ -85,7 +85,7 @@ const Header = () => {
                         <ul className='computer'>
                             <Link href='/services' locale={locale}><li className={pathname === "/services" ? "navactive" : ""}>{t("services")}</li></Link>
                             <Link href='/course' locale={locale}><li className={pathname === "/course" ? "navactive" : ""}>{t("course")}</li></Link>
-                            <Link href='/gallery' locale={locale}><li className={pathname === "/gallery" ? "navactive" : ""}>{t("gallery")}</li></Link>
+                            <Link href='/gallery' locale={locale}><li className={(pathname === "/gallery" || pathname === "/gallery/[id]") ? "navactive" : ""}>{t("gallery")}</li></Link>
                             <Link href='/contact' locale={locale}><li className={pathname === "/contact" ? "navactive" : ""}>{t("contact")}</li></Link>
                         </ul>
 

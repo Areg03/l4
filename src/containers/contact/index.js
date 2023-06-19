@@ -30,11 +30,11 @@ const ContactContainer = ({ title, data }) => {
                 <p>{t("smile")}</p>
                 <div className="contact-phone">
                     <div className="contact-text" >
-                        <div style={{ display: 'flex', alignItems: 'center' }} ><Image src={Mail} style={{ marginRight: 10 }} alt="phone" /> <p style={{ margin: '9px 0 9px' }} className='phone'>{data[0].email}</p></div>
-                        <div style={{ display: 'flex', alignItems: 'center', whiteSpace: 'pre-wrap' }} ><Image src={Phone} style={{ marginRight: 10 }} alt="phone" /> <p style={{ margin: '9px 0 9px' }} className='phone'>{data[0].phone_number}</p></div>
-                        <div style={{ display: 'flex', alignItems: 'center' }} ><Image src={Phone} style={{ marginRight: 10 }} alt="phone" /> <p style={{ margin: '9px 0 9px' }} className='phone'>{data[0].phone_number2}</p></div>
-                        <div style={{ display: 'flex', alignItems: 'center' }} ><Image src={Phone} style={{ marginRight: 10 }} alt="phone" /> <p style={{ margin: '9px 0 9px' }} className='phone'>{data[0].phone_number3}</p></div>
-                        <div style={{ display: 'flex', alignItems: 'center', marginBottom: '10px' }} ><Image src={Phone} style={{ marginRight: 10 }} alt="phone" /> <p style={{ margin: '9px 0 9px' }} className='phone'>{data[0].phone_number4}</p></div>
+                        <div style={{ display: 'flex', alignItems: 'center', marginLeft: '10px' }} ><Image src={Mail} style={{ marginRight: 10 }} alt="mail" /> <p style={{ margin: '9px 0 9px' }} className='phone'>{data[0].email}</p></div>
+                        <div  ><a href={`tel:${data[0].phone_number}`} style={{ display: 'flex', alignItems: 'center', whiteSpace: 'pre-wrap' }}><Image src={Phone} style={{ marginRight: 10 }} alt="phone" /> <p style={{ margin: '9px 0 9px' }} className='phone'>{data[0].phone_number}</p></a></div>
+                        <div ><a href={`tel:${data[0].phone_number2}`} style={{ display: 'flex', alignItems: 'center' }}><Image src={Phone} style={{ marginRight: 10 }} alt="phone" /> <p style={{ margin: '9px 0 9px' }} className='phone'>{data[0].phone_number2}</p></a></div>
+                        <div  ><a href={`tel:${data[0].phone_number3}`} style={{ display: 'flex', alignItems: 'center' }}><Image src={Phone} style={{ marginRight: 10 }} alt="phone" /> <p style={{ margin: '9px 0 9px' }} className='phone'>{data[0].phone_number3}</p></a></div>
+                        <div  ><a href={`tel:${data[0].phone_number4}`} style={{ display: 'flex', alignItems: 'center', marginBottom: '10px' }}><Image src={Phone} style={{ marginRight: 10 }} alt="phone" /> <p style={{ margin: '9px 0 9px' }} className='phone'>{data[0].phone_number4}</p></a></div>
                     </div>
                     {/* <div className="contact-domain">
                         <p>{data[0].email}</p>

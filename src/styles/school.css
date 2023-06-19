@@ -13,7 +13,7 @@
 
 .opinion {
     position: relative;
-    max-width: 900px;
+    max-width: 1000px;
     width: 100%;
 
     margin: 0 auto;
@@ -28,7 +28,7 @@
 .opinion-item {
     position: relative;
     width: 100%;
-    max-width: 900px;
+    max-width: 1000px;
     flex: 0 0 auto;
     height: 200px;
     border-radius: 130px;

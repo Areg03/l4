@@ -41,4 +41,4 @@ export async function getStaticProps({ locale }) {
     }
 }
 
-export default Course;
+export default Course;                                                         
