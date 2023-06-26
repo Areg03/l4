@@ -34,11 +34,11 @@ const Gallery = ({ category, gallery }) => {
         <>
             <div className="container ">
                 <div className="gallery-cat">
-                    <Link href='/gallery' locale={locale} style={{ fontWeight: 700, textTransform: 'uppercase' }} className={router.pathname === '/gallery' ? "green" : ""} >
+                    <Link href='/gallery' locale={locale} style={{ fontWeight: 700, textTransform: 'uppercase' }} className={router.pathname === '/gallery' ? "greenactive" : ""} >
                         {t("l4main")}
                     </Link>
                     {category?.map((i, k) => (
-                        <Link href={`/gallery/${k + 1}`} locale={locale} style={{ fontWeight: 700, textTransform: 'uppercase' }} className={id == i.id ? "green" : ""} key={k}>
+                        <Link href={`/gallery/${k + 1}`} locale={locale} style={{ fontWeight: 700, textTransform: 'uppercase' }} className={id == i.id ? "greenactive" : ""} key={k}>
                             {i[`title_${locale}`]}
 
                         </Link>
@@ -48,7 +48,7 @@ const Gallery = ({ category, gallery }) => {
                     <select defaultValue={id} onChange={(e) => router.push(`/${e.target.value}`)}>
                         <option value={'gallery'}  >{t("l4main")}</option>
                         {category?.map((i, k) => (
-                            <option key={i.id} value={`gallery/${i.id}`} className={id == i.id ? "green" : ""} >{i[`title_${locale}`]}</option>
+                            <option key={i.id} value={`gallery/${i.id}`} className={id == i.id ? "greenactive" : ""} >{i[`title_${locale}`]}</option>
                         ))}
                     </select>
                 </div>

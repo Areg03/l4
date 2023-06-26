@@ -528,3 +528,22 @@ button[disabled] {
   background-attachment: fixed;
   /* filter: blur(2px); */
 }
+
+.greenactive {
+  position: relative;
+}
+
+.greenactive::after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: -14px;
+  /* Adjust this value to position the circle appropriately */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  transition: 250ms;
+  background-color: rgba(64, 125, 43, 1);
+}
